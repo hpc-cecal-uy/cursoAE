@@ -1,0 +1,42 @@
+parent.0		= ../../simple/simple.params
+eval.problem		= ec.app.mapcolouring.Mapcolouring
+state		= ec.simple.SimpleEvolutionState
+
+generations		= 100000
+quit-on-run-complete	= true
+
+# Defino las variables generales al problema
+pop.subpop.0.size =                     50
+
+pop.subpop.0.species 		= ec.vector.IntegerVectorSpecies
+pop.subpop.0.species.fitness 	= ec.simple.SimpleFitness
+
+pop.subpop.0.species.ind	= ec.vector.IntegerVectorIndividual
+pop.subpop.0.species.min-gene=0
+pop.subpop.0.species.max-gene=3
+
+pop		= ec.Population
+init		= ec.simple.SimpleInitializer
+finish		= ec.simple.SimpleFinisher
+breed		= ec.simple.SimpleBreeder
+eval		= ec.simple.SimpleEvaluator
+stat		= ec.simple.SimpleStatistics
+exch		= ec.simple.SimpleExchanger
+
+pop.subpop.0.species.genome-size	= 63
+pop.subpop.0.species.crossover-type	= one
+pop.subpop.0.species.mutation-type	= reset
+pop.subpop.0.species.mutation-prob	= 0.01
+
+pop.subpop.0.species.pipe		     	= ec.vector.breed.VectorMutationPipeline
+pop.subpop.0.species.pipe.likelihood        	= 1.0
+pop.subpop.0.species.pipe.source.0		= ec.vector.breed.VectorCrossoverPipeline
+pop.subpop.0.species.pipe.source.0.likelihood 	= 0.75
+pop.subpop.0.species.pipe.source.0.source.0 	= ec.select.TournamentSelection
+pop.subpop.0.species.pipe.source.0.source.1 	= same
+select.tournament.size 				= 2
+
+
+seed.0		= time
+
+pop.subpop.0.species.ruta-limite-barrios=limite_barrios.csv
