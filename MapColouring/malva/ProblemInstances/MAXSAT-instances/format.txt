@@ -1,0 +1,4 @@
+// number of variables, number of clauses and number of literals per clause.
+// clause 1 (finalized in 0), if literal < 0 then the literal is negated.
+
+// clause N (finalized in 0), if literal < 0 then the literal is negated.

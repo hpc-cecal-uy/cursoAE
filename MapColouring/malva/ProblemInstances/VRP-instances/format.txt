@@ -1,0 +1,3 @@
+// Number of customers, Vehicle capacity, Maximum time per route, Service time and best known cost
+// Depot Coordenates
+// Customer coordenates and demand

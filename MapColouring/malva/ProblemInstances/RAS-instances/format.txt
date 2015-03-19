@@ -1,0 +1,2 @@
+// number of variables
+// range of the variables

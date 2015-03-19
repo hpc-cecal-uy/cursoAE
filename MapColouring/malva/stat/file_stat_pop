@@ -1,0 +1,13 @@
+#!/bin/bash
+
+lines=`cat $1 | wc -l`
+head_op=$(($lines - 1)) 
+tail_op=$(($head_op - 5))
+
+head -n $head_op $1 | tail -n $tail_op | gawk '{print $2}' > $1.best_fit
+head -n $head_op $1 | tail -n $tail_op | gawk '{print $3}' > $1.worse_fit
+head -n $head_op $1 | tail -n $tail_op | gawk '{print $3}' > $1.eval
+head -n $head_op $1 | tail -n $tail_op | gawk '{print $5}' > $1.iter
+head -n $head_op $1 | tail -n $tail_op | gawk '{print $6}' > $1.time
+head -n $head_op $1 | tail -n $tail_op | gawk '{print $7}' > $1.total_time
+echo $tail_op > $1.num_exec

@@ -1,0 +1,20 @@
+# Malva Configuration.
+MALLBA_DIR=/home/renzomassobrio/Documents/Fing/CeCal/Curso_AE/GitHub_AE/MapColouring/malva
+
+# MPI library
+MPI_BIN=/usr/bin
+
+# Malva information
+MALLBA_INC=${MALLBA_DIR}/src
+MALLBA_LIB=${MALLBA_DIR}/lib
+MALLBA_SRC=${MALLBA_DIR}/src
+MALLBA_REP=${MALLBA_DIR}/rep
+
+# Run variables
+CXX=$(MPI_BIN)/mpic++
+RUN=$(MPI_BIN)/mpirun
+
+# Other options: -g for debugging and -pg for profiling
+CPPFLAGS=-I$(MALLBA_INC) -Wno-deprecated -O3
+LDFLAGS=-L$(MALLBA_LIB)
+LOADLIBES=-lmallba  -lm
