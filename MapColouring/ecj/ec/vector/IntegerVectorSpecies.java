@@ -251,7 +251,6 @@ public class IntegerVectorSpecies extends VectorSpecies
         limites_barrios=new int [genomeSize][];
 
         try{
-            //Cargo las coordenadas
             String ruta_limite_barrios = state.parameters.getStringWithDefault(base.push(RUTA_LIMITE_BARRIOS), def.push(RUTA_LIMITE_BARRIOS), null);
             //System.out.println(ruta_limite_barrios);
             File fin = new File(ruta_limite_barrios);
