@@ -76,7 +76,7 @@ public final class MapColoring
                                                                                  pipeline,
                                                                                  new MapEvaluator(),
                                                                                  new RouletteWheelSelection(),
-                                                                                 new MersenneTwisterRNG());
+                                                                                 new Random());
         
         engine.addEvolutionObserver(new EvolutionLogger());
         return engine.evolve(100, // 100 individuals in the population.

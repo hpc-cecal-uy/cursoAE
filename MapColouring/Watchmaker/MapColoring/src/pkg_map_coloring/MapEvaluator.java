@@ -73,7 +73,6 @@ public class MapEvaluator implements FitnessEvaluator<List<Integer>>
         } catch (Exception ex) {
             Logger.getLogger(MapEvaluator.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
 
     public double getFitness(List<Integer> ind,

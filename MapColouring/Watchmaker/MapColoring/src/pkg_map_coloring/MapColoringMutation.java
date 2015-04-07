@@ -66,15 +66,16 @@ class MapColoringMutation implements EvolutionaryOperator<List<Integer>>
     
     protected List<Integer> mutateIndividual(List<Integer> individual, Random rng)
     {
-        if (getMutationProbability().nextValue().nextEvent(rng))
+        if (true)
         {
             List<Integer> newInd = new ArrayList<Integer>(individual);
-            int zona=rng.nextInt(MapColoring.cant_zonas);
-            
-            newInd.remove(zona);          
-            int newColor=(new Random().nextInt(MapColoring.cant_colores)+1);
-            newInd.add(zona, newColor);
-            
+            for(int zona=0; zona<MapColoring.cant_zonas; zona++){
+                if (getMutationProbability().nextValue().nextEvent(rng)){
+                    newInd.remove(zona);          
+                    int newColor=(new Random().nextInt(MapColoring.cant_colores)+1);
+                    newInd.add(zona, newColor);
+                }
+            }
             return newInd;
         }
         else // Nothing changed.
