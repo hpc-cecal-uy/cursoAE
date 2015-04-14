@@ -4,7 +4,7 @@ Implementación en ECJ
 ************************
 Es necesario agregar la ruta a la carpeta ecj en el CLASSPATH. Por ejemplo, editando el archivo ~/.bashrc y agregando la siguiente línea:
 
-CLASSPATH=:/home/usuario/MapColouring/ecj/
+export CLASSPATH=:/home/usuario/MapColouring/ecj/
 
 y luego ejecutando el comando:
 
