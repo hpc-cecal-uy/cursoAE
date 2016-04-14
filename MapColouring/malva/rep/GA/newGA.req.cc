@@ -72,7 +72,7 @@ skeleton newGA
 	        }
 	        free(tmp);
 	    }
-		//cout<<pbm;
+		cout<<pbm;
 
 		return is;
 	}
