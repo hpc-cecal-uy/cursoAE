@@ -1,5 +1,5 @@
 # Malva Configuration.
-MALLBA_DIR=/home/renzomassobrio/Documents/Fing/CeCal/Curso_AE/GitHub_AE/MapColouring/malva
+MALLBA_DIR=/home/renzo/clase_AE/cursoAE/MapColouring/malva
 
 # MPI library
 MPI_BIN=/usr/bin

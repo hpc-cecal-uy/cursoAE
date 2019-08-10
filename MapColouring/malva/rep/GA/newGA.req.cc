@@ -421,7 +421,10 @@ skeleton newGA
 			if (rand01()<=probability[1])
 			{
 				//La mutacion modifica un gen aleatoriamente con probabilidad uniforme en {0,3}
-				sol.var(i)=rand_int(0,3);
+				int mutated_value=rand_int(0,3);
+				while (mutated_value==sol.var(i))
+					mutated_value=rand_int(0,3);
+				sol.var(i)=mutated_value;
 			}
 		}
 	}
